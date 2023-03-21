@@ -15,7 +15,8 @@ import UIKit
         let name: String
         let location: Location
         let id: String
-        var imageURLString: String?
+        var imageURLString: [ String ]?
+        var adres: String?
     }
 
 

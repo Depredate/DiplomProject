@@ -35,13 +35,11 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     private var placeArray: [ Place ] = [] {
         didSet {
             drawMarkers()
-            
         }
     }
     
     private func addTargets() {
         segmentedControl.addTarget(self, action: #selector(segmentedControlValueChanged(sender:)), for: .allEvents)
-        
     }
 
     @objc private func segmentedControlValueChanged(sender: UISegmentedControl) {
@@ -57,35 +55,12 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         createRadiusCircle()
     }
     
-    private func configureFirebase() -> Firestore {
-        var dataBase: Firestore!
-        let settings = FirestoreSettings()
-        Firestore.firestore().settings = settings
-        dataBase = Firestore.firestore()
-        return dataBase
-    }
     private func setUpMapView() {
         mapView.isMyLocationEnabled = true
     }
     private func getPlacec() {
-        let dataBase = configureFirebase()
-        dataBase.collection("Map").getDocuments { [weak self] result, error in
-            guard let result else { return }
-            if let error = error{
-                print(error.localizedDescription)
-            }
-          var placeArray: [ Place ] = []
-            for doc in result.documents{
-                let data = doc.data()
-                guard let name = data["name"] as? String else { return }
-                guard let geoPoint = data["location"] as? GeoPoint else { return }
-                guard let id = data["id"] as? String else { return }
-                let location = Location(latitude: geoPoint.latitude, langitude: geoPoint.longitude)
-                let place = Place(name: name, location: location, id: id)
-                placeArray.append(place)
-            }
-            guard let self else { return }
-            self.placeArray =  placeArray
+        APIManager.shared.getPlacec { [weak self]  placecFromFirebase in
+            self?.placeArray = placecFromFirebase
         }
     }
     
@@ -96,13 +71,13 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
             createMarker(coordinate: position, position: myPosition, id: place.id )
         }
     }
+
     private func setupClusterManager() {
         let iconGenerator = GMUDefaultClusterIconGenerator()
         let algorithm = GMUNonHierarchicalDistanceBasedAlgorithm()
         let renderer = GMUDefaultClusterRenderer(mapView: mapView, clusterIconGenerator: iconGenerator)
         clusterManager = GMUClusterManager(map: mapView, algorithm: algorithm, renderer: renderer)
         clusterManager?.setMapDelegate(self)
-        
     }
     private func clearMap() {
         mapView.clear()
