@@ -26,14 +26,6 @@ class AuthManager {
         } else {
             completion(false)
         }
-        
-
     }
-    
-    
-    
-    
-    
-    
 }
 

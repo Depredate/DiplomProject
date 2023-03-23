@@ -10,16 +10,9 @@ import UIKit
 class RegistrationViewController: UIViewController {
 
     @IBOutlet weak var titleLabel: UILabel!
-    
-    
     @IBOutlet weak var emailTextField: UITextField!
-    
-    
     @IBOutlet weak var passwordTextField: UITextField!
-    
     @IBOutlet weak var repeatPasswordTextField: UITextField!
-    
-    
     @IBOutlet weak var registerButton: UIButton!
  
    override func viewDidLoad() {
@@ -38,8 +31,6 @@ class RegistrationViewController: UIViewController {
        emailTextField.delegate = self
        passwordTextField.delegate = self
        repeatPasswordTextField.delegate = self
-    
-       
    }
  
    private func setupButtons() {
@@ -57,21 +48,18 @@ class RegistrationViewController: UIViewController {
        guard password == repeatPassword else { return nil }
        let user = UserModel(email: email, password: password)
        return user
-       
    }
  }
 
-
 extension RegistrationViewController {
     @objc private func registrationButtonWasPressed() {
-    
         let user = checkValidEntry()
         guard let user else {
         showMessage(title: "Ошибка", message: "Проверьте корректность ведённых данных")
             return }
+        
         AuthManager().createUser(user: user)  { [ weak self ]result in
             switch result {
-                    
                 case .success( _ ):
                     print("regano")
                     self?.navigationController?.popViewController(animated: true)
@@ -81,9 +69,9 @@ extension RegistrationViewController {
         }
     }
 }
+
 extension RegistrationViewController: UITextFieldDelegate {
      func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
          self.view.endEditing(true)
          return false
      }

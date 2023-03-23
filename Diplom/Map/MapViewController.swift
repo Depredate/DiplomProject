@@ -13,11 +13,8 @@ import GoogleMapsUtils
 class MapViewController: UIViewController, GMSMapViewDelegate {
 
     private var clusterManager: GMUClusterManager?
-    
     @IBOutlet weak var mapView: GMSMapView!
-    
     @IBOutlet weak var segmentedControl: UISegmentedControl!
-    
     private var circleRadius: Double = 2000
     
     override func viewDidLoad() {
@@ -32,6 +29,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         setupClusterManager()
         createRadiusCircle()
     }
+    
     private var placeArray: [ Place ] = [] {
         didSet {
             drawMarkers()
@@ -48,7 +46,6 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
             case 1: circleRadius = 5000
             case 2: circleRadius = 30000
             default: break
-                
         }
         clearMap()
         drawMarkers()
@@ -58,6 +55,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     private func setUpMapView() {
         mapView.isMyLocationEnabled = true
     }
+    
     private func getPlacec() {
         APIManager.shared.getPlacec { [weak self]  placecFromFirebase in
             self?.placeArray = placecFromFirebase
@@ -79,10 +77,10 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         clusterManager = GMUClusterManager(map: mapView, algorithm: algorithm, renderer: renderer)
         clusterManager?.setMapDelegate(self)
     }
+    
     private func clearMap() {
         mapView.clear()
         clusterManager?.clearItems()
-        
     }
     
     private func createRadiusCircle() {
@@ -91,7 +89,8 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         circle.fillColor = UIColor.green.withAlphaComponent(0.1)
         circle.map = mapView
     }
-    private func createMarker(coordinate: CLLocationCoordinate2D , position: CLLocation, id: String) {
+    
+private func createMarker(coordinate: CLLocationCoordinate2D , position: CLLocation, id: String) {
         let distance = position.distance(from: CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude))
         if distance < circleRadius {
             let marker = GMSMarker(position: CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude))
@@ -99,8 +98,8 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
             marker.map = mapView
             marker.userData = ["id": id ]
        }
-        
     }
+    
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
         let dict = marker.userData as? [ String: String ]
         guard let id = dict?["id"] as? String else { return false }
@@ -108,7 +107,5 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         present(descriptionViewController, animated: true)
         return true
     }
-    
-    
 }
 

@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 extension UIViewController {
     func showMessage(title: String, message: String){
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -19,10 +18,8 @@ extension UIViewController {
                 guard child.parent == nil else {
                     return
                 }
-                
                 addChild(child)
                 view.addSubview(child.view)
-                
                 child.view.translatesAutoresizingMaskIntoConstraints = false
                 let constraints = [
                     view.leadingAnchor.constraint(equalTo: child.view.leadingAnchor),
@@ -32,7 +29,6 @@ extension UIViewController {
                 ]
                 constraints.forEach { $0.isActive = true }
                 view.addConstraints(constraints)
-                
                 child.didMove(toParent: self)
             }
     func remove(childViewController child: UIViewController?) {
@@ -47,8 +43,6 @@ extension UIViewController {
             child.willMove(toParent: nil)
             child.view.removeFromSuperview()
             child.removeFromParent()
-        
         }
-    
 }
 

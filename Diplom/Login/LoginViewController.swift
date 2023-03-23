@@ -9,8 +9,6 @@ import UIKit
 
 protocol LoginViewControllerDelegate : AnyObject {
     func userWasLogined()
-        
-    
 }
 
 class LoginViewController: UIViewController {
@@ -18,20 +16,10 @@ class LoginViewController: UIViewController {
     weak var delegate: LoginViewControllerDelegate?
     
     @IBOutlet weak var emailTextField: UITextField!
-        
-    
     @IBOutlet weak var loginLabel: UILabel!
-    
-    
     @IBOutlet weak var passwordTextField: UITextField!
-    
-    
     @IBOutlet weak var loginButton: UIButton!
-    
-    
     @IBOutlet weak var registerButton: UIButton!
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,14 +45,15 @@ class LoginViewController: UIViewController {
         loginButton.addTarget(self, action: #selector(loginButtonWasPressed), for: .touchUpInside)
         registerButton.addTarget(self, action: #selector(registerButtonWasPressed), for: .touchUpInside)
     }
+    
     private func checkValidEntry()->UserModel? {
         guard let email = emailTextField.text, !email.isEmpty else { return nil }
         guard let password = passwordTextField.text, !password.isEmpty else { return nil }
     let user = UserModel(email: email, password: password)
         return user
     }
-    
 }
+
 extension LoginViewController {
     @objc private func loginButtonWasPressed() {
         delegate?.userWasLogined()
@@ -73,15 +62,11 @@ extension LoginViewController {
     @objc private func registerButtonWasPressed() {
         let registrationVC = RegistrationViewController()
         navigationController?.pushViewController(registrationVC, animated: true)
-        
-        
     }
-    
 }
     
 extension LoginViewController: UITextFieldDelegate {
      func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
          self.view.endEditing(true)
          return false
      }
