@@ -45,7 +45,7 @@ class PlaceDescriptionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
+        view.backgroundColor = .white
         getAllPlacec()
         setupCollectionView()
     }
@@ -85,7 +85,7 @@ extension PlaceDescriptionViewController: UICollectionViewDataSource {
 }
 extension PlaceDescriptionViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        CGSize(width: 200, height: 200)
+        CGSize(width: 300, height: 200)
     }
     
 }

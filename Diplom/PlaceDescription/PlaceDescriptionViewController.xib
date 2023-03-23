@@ -22,30 +22,36 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KWI-O5-U71">
-                    <rect key="frame" x="16" y="79" width="361" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
+                    <rect key="frame" x="16" y="79" width="361" height="35"/>
+                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="30"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4uD-2y-rJl">
-                    <rect key="frame" x="16" y="120" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4uD-2y-rJl">
+                    <rect key="frame" x="16" y="134" width="361" height="23.333333333333343"/>
+                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="i0j-Hc-YVJ">
-                    <rect key="frame" x="16" y="200" width="361" height="200"/>
+                    <rect key="frame" x="16" y="214" width="361" height="200"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="200" id="kwQ-54-WfR"/>
                     </constraints>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VT8-bB-yKq">
-                        <size key="itemSize" width="200" height="200"/>
+                        <size key="itemSize" width="300" height="200"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eka-7d-vqd">
+                    <rect key="frame" x="75" y="162.33333333333334" width="243" height="3"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="3" id="WoR-Vf-jFe"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -55,9 +61,13 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="i0j-Hc-YVJ" secondAttribute="trailing" constant="16" id="58c-a1-eNa"/>
                 <constraint firstItem="4uD-2y-rJl" firstAttribute="top" secondItem="KWI-O5-U71" secondAttribute="bottom" constant="20" id="ApW-ZG-sYW"/>
                 <constraint firstItem="i0j-Hc-YVJ" firstAttribute="top" secondItem="KWI-O5-U71" secondAttribute="bottom" constant="100" id="EcO-of-LkS"/>
+                <constraint firstItem="eka-7d-vqd" firstAttribute="top" secondItem="4uD-2y-rJl" secondAttribute="bottom" constant="5" id="UAF-OY-ssD"/>
                 <constraint firstItem="i0j-Hc-YVJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="dD7-IY-ZVW"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4uD-2y-rJl" secondAttribute="trailing" constant="16" id="pta-yb-idK"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KWI-O5-U71" secondAttribute="trailing" constant="16" id="pwU-KV-NGG"/>
                 <constraint firstItem="4uD-2y-rJl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="qgv-Jw-nZJ"/>
+                <constraint firstAttribute="trailing" secondItem="eka-7d-vqd" secondAttribute="trailing" constant="75" id="twk-V1-SFi"/>
+                <constraint firstItem="eka-7d-vqd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="75" id="uTs-Tq-6b2"/>
             </constraints>
             <point key="canvasLocation" x="112.21374045801527" y="20.422535211267608"/>
         </view>
