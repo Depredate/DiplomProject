@@ -52,18 +52,17 @@ class LoginViewController: UIViewController {
     let user = UserModel(email: email, password: password)
         return user
     }
-}
 
-extension LoginViewController {
     @objc private func loginButtonWasPressed() {
         delegate?.userWasLogined()
     }
     
     @objc private func registerButtonWasPressed() {
-        let registrationVC = RegistrationViewController()
+        let registrationVC = RegistrationViewController(nibName: String(describing: RegistrationViewController.self), bundle: nil)
         navigationController?.pushViewController(registrationVC, animated: true)
     }
 }
+
     
 extension LoginViewController: UITextFieldDelegate {
      func textFieldShouldReturn(_ textField: UITextField) -> Bool {

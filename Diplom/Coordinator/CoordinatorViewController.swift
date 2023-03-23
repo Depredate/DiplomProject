@@ -9,6 +9,7 @@
 import UIKit
 
 class CoordinatorViewController: UIViewController {
+    
     private let currentNavigationController = UINavigationController()
     
     override func viewDidLoad() {

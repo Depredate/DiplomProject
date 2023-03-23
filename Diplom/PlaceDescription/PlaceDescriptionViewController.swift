@@ -57,10 +57,7 @@ class PlaceDescriptionViewController: UIViewController {
         placeImagesCollectionView.register(nib, forCellWithReuseIdentifier: String(describing: PlaceImagesCollectionViewCell.self))
         placeImagesCollectionView.dataSource = self
         placeImagesCollectionView.delegate = self
-        
     }
-    
-    
 }
 
 extension PlaceDescriptionViewController: UICollectionViewDataSource {
@@ -76,12 +73,10 @@ extension PlaceDescriptionViewController: UICollectionViewDataSource {
         imageCell.setupCell(URLString: imageURL)
         return imageCell
     }
-    
-    
 }
+
 extension PlaceDescriptionViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         CGSize(width: 300, height: 200)
     }
-    
 }
