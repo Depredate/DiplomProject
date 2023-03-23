@@ -31,9 +31,10 @@ class APIManager  {
                 guard let geoPoint = data["location"] as? GeoPoint else { return }
                 guard let id = data["id"] as? String else { return }
                 let imagesURLS = data["imageURL"] as? [ String ]
+                let nameObject = data["nameObject"] as? String
                 let adres = data["adres"] as? String
                 let location = Location(latitude: geoPoint.latitude, langitude: geoPoint.longitude)
-                let place = Place(name: name, location: location, id: id, imageURLString: imagesURLS, adres: adres)
+                let place = Place(name: name, location: location, id: id, imageURLString: imagesURLS, adres: adres, nameObject: nameObject)
                 placeArray.append(place)
             }
             completion(placeArray)

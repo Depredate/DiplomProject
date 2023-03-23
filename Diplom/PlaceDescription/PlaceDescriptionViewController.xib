@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlaceDescriptionViewController" customModule="Diplom" customModuleProvider="target">
             <connections>
                 <outlet property="adresPlaceLabel" destination="4uD-2y-rJl" id="YEW-dA-s1q"/>
+                <outlet property="nameObjectLabel" destination="zwC-j2-ZlY" id="Lec-Cj-2dK"/>
                 <outlet property="namePlaceLabel" destination="KWI-O5-U71" id="gds-4b-HTT"/>
                 <outlet property="placeImagesCollectionView" destination="i0j-Hc-YVJ" id="XE6-IM-2O5"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -21,19 +22,19 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KWI-O5-U71">
-                    <rect key="frame" x="16" y="79" width="361" height="35"/>
-                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="30"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nameObject" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zwC-j2-ZlY">
+                    <rect key="frame" x="16" y="94" width="361" height="21.333333333333329"/>
+                    <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="20"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4uD-2y-rJl">
-                    <rect key="frame" x="16" y="134" width="361" height="23.333333333333343"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="adres" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4uD-2y-rJl">
+                    <rect key="frame" x="16" y="190.33333333333334" width="361" height="23.333333333333343"/>
                     <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="i0j-Hc-YVJ">
-                    <rect key="frame" x="16" y="214" width="361" height="200"/>
+                    <rect key="frame" x="16" y="270.33333333333331" width="361" height="200"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="200" id="kwQ-54-WfR"/>
@@ -46,23 +47,31 @@
                     </collectionViewFlowLayout>
                 </collectionView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eka-7d-vqd">
-                    <rect key="frame" x="75" y="162.33333333333334" width="243" height="3"/>
+                    <rect key="frame" x="75" y="218.66666666666666" width="243" height="3"/>
                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="3" id="WoR-Vf-jFe"/>
                     </constraints>
                 </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KWI-O5-U71">
+                    <rect key="frame" x="16" y="135.33333333333334" width="361" height="35"/>
+                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="30"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="KWI-O5-U71" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="0NH-9y-eAU"/>
                 <constraint firstItem="KWI-O5-U71" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="3lb-Ea-cy9"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="i0j-Hc-YVJ" secondAttribute="trailing" constant="16" id="58c-a1-eNa"/>
+                <constraint firstItem="KWI-O5-U71" firstAttribute="top" secondItem="zwC-j2-ZlY" secondAttribute="bottom" constant="20" id="9Wv-Cb-YL1"/>
                 <constraint firstItem="4uD-2y-rJl" firstAttribute="top" secondItem="KWI-O5-U71" secondAttribute="bottom" constant="20" id="ApW-ZG-sYW"/>
                 <constraint firstItem="i0j-Hc-YVJ" firstAttribute="top" secondItem="KWI-O5-U71" secondAttribute="bottom" constant="100" id="EcO-of-LkS"/>
                 <constraint firstItem="eka-7d-vqd" firstAttribute="top" secondItem="4uD-2y-rJl" secondAttribute="bottom" constant="5" id="UAF-OY-ssD"/>
                 <constraint firstItem="i0j-Hc-YVJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="dD7-IY-ZVW"/>
+                <constraint firstItem="zwC-j2-ZlY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="hof-QO-9FV"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zwC-j2-ZlY" secondAttribute="trailing" constant="16" id="i4s-rq-Nsd"/>
+                <constraint firstItem="zwC-j2-ZlY" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="35" id="o6U-qL-5VC"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4uD-2y-rJl" secondAttribute="trailing" constant="16" id="pta-yb-idK"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KWI-O5-U71" secondAttribute="trailing" constant="16" id="pwU-KV-NGG"/>
                 <constraint firstItem="4uD-2y-rJl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="qgv-Jw-nZJ"/>

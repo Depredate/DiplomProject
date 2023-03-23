@@ -11,14 +11,11 @@ class PlaceDescriptionViewController: UIViewController {
     
     @IBOutlet weak var placeImagesCollectionView: UICollectionView!
     @IBOutlet weak var namePlaceLabel: UILabel!
-    
     @IBOutlet weak var adresPlaceLabel: UILabel!
+    @IBOutlet weak var nameObjectLabel: UILabel!
     
     let placeId: String
-    
     var currentPlace: Place?
-    
-    
     
     init(placeId: String) {
         self.placeId = placeId
@@ -28,14 +25,13 @@ class PlaceDescriptionViewController: UIViewController {
     private func getPlace(placecArray: [ Place ] ) {
         guard let place = placecArray.filter({$0.id == placeId}).first else { return }
         currentPlace = place
-        
         setupControllerFields()
     }
     private func setupControllerFields() {
         namePlaceLabel.text = currentPlace?.name
         placeImagesCollectionView.reloadData()
         adresPlaceLabel.text = currentPlace?.adres
-        
+        nameObjectLabel.text = currentPlace?.nameObject
         
     }
     

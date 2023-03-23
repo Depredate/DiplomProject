@@ -14,8 +14,8 @@ class PlaceImagesCollectionViewCell: UICollectionViewCell {
    
     override func awakeFromNib() {
         super.awakeFromNib()
-        
     }
+    
     func setupCell(URLString: String) {
         let imageURL = URL(string: URLString)
         imageView.sd_setImage(with: imageURL)

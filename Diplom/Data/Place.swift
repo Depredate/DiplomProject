@@ -17,6 +17,7 @@ import UIKit
         let id: String
         var imageURLString: [ String ]?
         var adres: String?
+        var nameObject: String?
     }
 
 
