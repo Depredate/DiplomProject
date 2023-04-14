@@ -20,6 +20,7 @@ class AuthManager {
         }
     }
     
+    
     func checkAuthorization(completion: @escaping(Bool) -> Void) {
         if Auth.auth().currentUser != nil {
             completion(true)
