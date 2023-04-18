@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -23,6 +24,9 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="cart" catalog="system" highlightedImage="logo48px.png" translatesAutoresizingMaskIntoConstraints="NO" id="w6w-Ly-RuY">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Регистрация" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfJ-wK-kHu">
                     <rect key="frame" x="16" y="94" width="361" height="38.333333333333343"/>
                     <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="35"/>
@@ -57,20 +61,23 @@
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="99C-xw-mJM"/>
-            <color key="backgroundColor" systemColor="labelColor"/>
             <constraints>
                 <constraint firstItem="99C-xw-mJM" firstAttribute="trailing" secondItem="VVV-Yg-rHV" secondAttribute="trailing" constant="16" id="LC2-e2-LLj"/>
+                <constraint firstItem="w6w-Ly-RuY" firstAttribute="trailing" secondItem="99C-xw-mJM" secondAttribute="trailing" id="Muc-hk-ded"/>
                 <constraint firstItem="VVV-Yg-rHV" firstAttribute="leading" secondItem="99C-xw-mJM" secondAttribute="leading" constant="16" id="Myv-a3-iyv"/>
+                <constraint firstItem="w6w-Ly-RuY" firstAttribute="top" secondItem="cGd-7w-g1J" secondAttribute="top" id="OgS-2C-fRl"/>
                 <constraint firstItem="m1Y-H6-oSF" firstAttribute="top" secondItem="yfJ-wK-kHu" secondAttribute="bottom" constant="35" id="PeF-ao-CFq"/>
                 <constraint firstItem="yfJ-wK-kHu" firstAttribute="top" secondItem="99C-xw-mJM" secondAttribute="top" constant="35" id="TXP-2U-G48"/>
                 <constraint firstItem="W5k-VP-h6D" firstAttribute="leading" secondItem="99C-xw-mJM" secondAttribute="leading" constant="16" id="VSF-fW-baq"/>
                 <constraint firstItem="99C-xw-mJM" firstAttribute="trailing" secondItem="W5k-VP-h6D" secondAttribute="trailing" constant="16" id="Zp9-3g-av8"/>
                 <constraint firstItem="99C-xw-mJM" firstAttribute="trailing" secondItem="m1Y-H6-oSF" secondAttribute="trailing" constant="16" id="b2l-uD-XE9"/>
+                <constraint firstAttribute="bottom" secondItem="w6w-Ly-RuY" secondAttribute="bottom" id="bRU-uj-HJ9"/>
                 <constraint firstItem="99C-xw-mJM" firstAttribute="trailing" secondItem="uvH-uu-coz" secondAttribute="trailing" constant="16" id="cxr-pj-zQl"/>
                 <constraint firstItem="uvH-uu-coz" firstAttribute="top" secondItem="VVV-Yg-rHV" secondAttribute="bottom" constant="50" id="h7x-Ze-7vG"/>
                 <constraint firstItem="m1Y-H6-oSF" firstAttribute="leading" secondItem="99C-xw-mJM" secondAttribute="leading" constant="16" id="hWM-EX-xFX"/>
                 <constraint firstItem="VVV-Yg-rHV" firstAttribute="top" secondItem="W5k-VP-h6D" secondAttribute="bottom" constant="15" id="kdD-Yn-3qP"/>
                 <constraint firstItem="W5k-VP-h6D" firstAttribute="top" secondItem="m1Y-H6-oSF" secondAttribute="bottom" constant="15" id="prc-t6-za3"/>
+                <constraint firstItem="w6w-Ly-RuY" firstAttribute="leading" secondItem="99C-xw-mJM" secondAttribute="leading" id="ptT-db-J6f"/>
                 <constraint firstItem="yfJ-wK-kHu" firstAttribute="leading" secondItem="99C-xw-mJM" secondAttribute="leading" constant="16" id="qMa-AH-LoW"/>
                 <constraint firstItem="uvH-uu-coz" firstAttribute="leading" secondItem="99C-xw-mJM" secondAttribute="leading" constant="16" id="rpS-bA-pPE"/>
                 <constraint firstItem="99C-xw-mJM" firstAttribute="trailing" secondItem="yfJ-wK-kHu" secondAttribute="trailing" constant="16" id="sea-Hc-fc8"/>
@@ -79,9 +86,8 @@
         </view>
     </objects>
     <resources>
-        <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <image name="cart" catalog="system" width="128" height="102"/>
+        <image name="logo48px.png" width="38.400001525878906" height="38.400001525878906"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

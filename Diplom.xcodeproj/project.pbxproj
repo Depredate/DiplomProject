@@ -22,7 +22,6 @@
 		54BDF7CE29818C56006638AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDF7CD29818C56006638AA /* SceneDelegate.swift */; };
 		54BDF7D029818C56006638AA /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDF7CF29818C56006638AA /* MapViewController.swift */; };
 		54BDF7D329818C56006638AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54BDF7D129818C56006638AA /* Main.storyboard */; };
-		54BDF7D529818C5B006638AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54BDF7D429818C5B006638AA /* Assets.xcassets */; };
 		54BDF7D829818C5B006638AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54BDF7D629818C5B006638AA /* LaunchScreen.storyboard */; };
 		54BDF7E529819573006638AA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54BDF7E429819572006638AA /* GoogleService-Info.plist */; };
 		54BDF7E829819DDB006638AA /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDF7E729819DDB006638AA /* Place.swift */; };
@@ -51,7 +50,6 @@
 		54BDF7CD29818C56006638AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		54BDF7CF29818C56006638AA /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		54BDF7D229818C56006638AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		54BDF7D429818C5B006638AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54BDF7D729818C5B006638AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		54BDF7D929818C5B006638AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54BDF7E429819572006638AA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -171,7 +169,6 @@
 				54F8D53129C23A8400C8C34A /* PlaceDescription */,
 				54BDF7E629819DCA006638AA /* Data */,
 				54BDF7D129818C56006638AA /* Main.storyboard */,
-				54BDF7D429818C5B006638AA /* Assets.xcassets */,
 				54BDF7D629818C5B006638AA /* LaunchScreen.storyboard */,
 				54BDF7D929818C5B006638AA /* Info.plist */,
 				54BDF7E429819572006638AA /* GoogleService-Info.plist */,
@@ -299,7 +296,6 @@
 				54BDF7E529819573006638AA /* GoogleService-Info.plist in Resources */,
 				5477C715298E57F500E18F03 /* RegistrationViewController.xib in Resources */,
 				54D7478229CA32CB00F03547 /* PlaceImagesCollectionViewCell.xib in Resources */,
-				54BDF7D529818C5B006638AA /* Assets.xcassets in Resources */,
 				54D7477B29C23B7C00F03547 /* PlaceDescriptionViewController.xib in Resources */,
 				54BDF7D329818C56006638AA /* Main.storyboard in Resources */,
 			);
