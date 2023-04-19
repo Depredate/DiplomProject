@@ -54,6 +54,7 @@ class LoginViewController: UIViewController {
     }
 
     @objc private func loginButtonWasPressed() {
+       
         delegate?.userWasLogined()
     }
     
