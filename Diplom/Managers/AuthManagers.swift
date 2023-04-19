@@ -8,6 +8,7 @@
 import Foundation
 import FirebaseAuth
 
+
 class AuthManager {
     private let auth = Auth.auth()
     func createUser(user: UserModel, completionBlock: @escaping (Result<AuthDataResult, Error>) -> Void) {
