@@ -34,11 +34,11 @@ class CoordinatorViewController: UIViewController {
         addFullScreen(childViewController: currentNavigationController)
         loginViewController.delegate = self
     }
+    
     private func presentMapViewController() {
         remove(childViewController: currentNavigationController)
         currentNavigationController.viewControllers = []
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        
         guard let mapViewController = storyboard.instantiateViewController(withIdentifier: String(describing: MapViewController.self)) as? MapViewController else { return }
         currentNavigationController.viewControllers = [ mapViewController ]
         addFullScreen(childViewController: currentNavigationController)
