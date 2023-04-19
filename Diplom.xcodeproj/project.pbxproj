@@ -31,6 +31,7 @@
 		54D7478129CA32CB00F03547 /* PlaceImagesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D7477F29CA32CB00F03547 /* PlaceImagesCollectionViewCell.swift */; };
 		54D7478229CA32CB00F03547 /* PlaceImagesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54D7478029CA32CB00F03547 /* PlaceImagesCollectionViewCell.xib */; };
 		54D7478529CA350C00F03547 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 54D7478429CA350C00F03547 /* SDWebImage */; };
+		84202AFF29F04A0100598E0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84202AFE29F04A0100598E0C /* Assets.xcassets */; };
 		B6B00288EF02191023CAB886 /* Pods_Diplom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 204F404716946DC80985E068 /* Pods_Diplom.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		54D7477C29CA132800F03547 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		54D7477F29CA32CB00F03547 /* PlaceImagesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceImagesCollectionViewCell.swift; sourceTree = "<group>"; };
 		54D7478029CA32CB00F03547 /* PlaceImagesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceImagesCollectionViewCell.xib; sourceTree = "<group>"; };
+		84202AFE29F04A0100598E0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../Downloads/Diplom/Diplom/Assets.xcassets; sourceTree = "<group>"; };
 		D0CBAA153847E27E8051630B /* Pods-Diplom.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Diplom.release.xcconfig"; path = "Target Support Files/Pods-Diplom/Pods-Diplom.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -169,6 +171,7 @@
 				54F8D53129C23A8400C8C34A /* PlaceDescription */,
 				54BDF7E629819DCA006638AA /* Data */,
 				54BDF7D129818C56006638AA /* Main.storyboard */,
+				84202AFE29F04A0100598E0C /* Assets.xcassets */,
 				54BDF7D629818C5B006638AA /* LaunchScreen.storyboard */,
 				54BDF7D929818C5B006638AA /* Info.plist */,
 				54BDF7E429819572006638AA /* GoogleService-Info.plist */,
@@ -297,6 +300,7 @@
 				5477C715298E57F500E18F03 /* RegistrationViewController.xib in Resources */,
 				54D7478229CA32CB00F03547 /* PlaceImagesCollectionViewCell.xib in Resources */,
 				54D7477B29C23B7C00F03547 /* PlaceDescriptionViewController.xib in Resources */,
+				84202AFF29F04A0100598E0C /* Assets.xcassets in Resources */,
 				54BDF7D329818C56006638AA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
