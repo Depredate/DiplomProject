@@ -58,6 +58,7 @@ class LoginViewController: UIViewController {
         delegate?.userWasLogined()
     }
     
+    
     @objc private func registerButtonWasPressed() {
         let registrationVC = RegistrationViewController(nibName: String(describing: RegistrationViewController.self), bundle: nil)
         navigationController?.pushViewController(registrationVC, animated: true)
